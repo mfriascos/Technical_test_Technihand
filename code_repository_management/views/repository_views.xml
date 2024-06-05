@@ -1,60 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="git_repo.list">
-      <field name="name">git_repo list</field>
-      <field name="model">git_repo.git_repo</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
--->
 
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="git_repo.action_window">
-      <field name="name">git_repo window</field>
-      <field name="res_model">git_repo.git_repo</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
+	<record id="view_repository_form" model="ir.ui.view">
+		<field name="name">view.repository.form</field>
+		<field name="model">repository</field>
+		<field name="arch" type="xml">
+			<form string="Repository">
+				<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,active,inactive,cancelled" />
+					<button name="action_active" type="object" string="Active" states="draft" class="btn-primary"/>
+                    <button name="action_inactive" type="object" string="Inactive" states="active" class="btn-success"/>
+                    <button name="action_cancel" type="object" string="Cancel" states="draft,active,inactive" class="btn-danger"/>
+				</header>
+				<sheet>
+					<group name="left_group">
+						<field name="name" />
+						<field name="user" />
+					</group>
+					<group name="right_group">
+						<field name="link" />
+						<field name="commits_last_date" />
+						<field name="commits_contributor" />
+					</group>
+					<notebook>
+						<page name="commit_lines" string="Commit Lines">
+							<field name="commit_line_ids">
+								<tree string="Commit Lines">
+									<field name="date" />
+									<field name="hash" />
+									<field name="partner_id" />
+									<field name="message" />
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
 
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="git_repo.action_server">
-      <field name="name">git_repo server</field>
-      <field name="model_id" ref="model_git_repo_git_repo"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
+	<record id="view_repository_tree" model="ir.ui.view">
+		<field name="name">view.repository.tree</field>
+		<field name="model">repository</field>
+		<field name="arch" type="xml">
+			<tree string="Repositories">
+				<field name="name" />
+				<field name="user" />
+				<field name="link" />
+				<field name="commits_last_date" />
+			</tree>
+		</field>
+	</record>
 
-    <!-- Top menu item -->
-<!--
-    <menuitem name="git_repo" id="git_repo.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="git_repo.menu_1" parent="git_repo.menu_root"/>
-    <menuitem name="Menu 2" id="git_repo.menu_2" parent="git_repo.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="git_repo.menu_1_list" parent="git_repo.menu_1"
-              action="git_repo.action_window"/>
-    <menuitem name="Server to list" id="git_repo" parent="git_repo.menu_2"
-              action="git_repo.action_server"/>
--->
-  </data>
+	<record id="action_repository" model="ir.actions.act_window">
+        <field name="name">Repositories</field>
+        <field name="res_model">repository</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new repository.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_repository_root" name="Repositories"
+              sequence="10"/>
+
+    <menuitem id="menu_repository" name="Repositories"
+              parent="menu_repository_root"
+              action="action_repository" sequence="10"/>
+
 </odoo>

@@ -1,3 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import repo
+from . import commits
+from . import repository
