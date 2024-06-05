@@ -8,29 +8,32 @@
 		<field name="arch" type="xml">
 			<form string="Repository">
 				<header>
-					<field name="state" widget="statusbar" statusbar_visible="draft,active,inactive,cancelled" />
-					<button name="action_active" type="object" string="Active" states="draft" class="btn-primary"/>
-                    <button name="action_inactive" type="object" string="Inactive" states="active" class="btn-success"/>
-                    <button name="action_cancel" type="object" string="Cancel" states="draft,active,inactive" class="btn-danger"/>
+					<field name="state" widget="statusbar" statusbar_visible="draft,active,inactive,cancelled"/>
+					<button name="action_active" type="object" string="Activate" states="draft" class="btn-primary"/>
+					<button name="action_inactive" type="object" string="Deactivate" states="active" class="btn-secondary"/>
+					<button name="action_draft" type="object" string="Draft" states="active,inactive" class="btn-secondary"/>
+					<button name="action_cancel" type="object" string="Cancel" states="draft,active,inactive" class="btn-danger"/>
 				</header>
 				<sheet>
-					<group name="left_group">
-						<field name="name" />
-						<field name="user" />
-					</group>
-					<group name="right_group">
-						<field name="link" />
-						<field name="commits_last_date" />
-						<field name="commits_contributor" />
+					<group>
+						<group>
+							<field name="name"/>
+							<field name="user_id" string="User"/>
+						</group>
+						<group>
+							<field name="link"/>
+							<field name="commits_last_date"/>
+							<field name="commits_contributor"/>
+						</group>
 					</group>
 					<notebook>
-						<page name="commit_lines" string="Commit Lines">
-							<field name="commit_line_ids">
-								<tree string="Commit Lines">
-									<field name="date" />
-									<field name="hash" />
-									<field name="partner_id" />
-									<field name="message" />
+						<page string="Commit Lines">
+							<field name="commit_line_ids" context="{'default_repository_id': id}">
+								<tree string="Commit Lines" editable="bottom">
+									<field name="date"/>
+									<field name="hash"/>
+									<field name="partner_id"/>
+									<field name="message"/>
 								</tree>
 							</field>
 						</page>
@@ -40,35 +43,32 @@
 		</field>
 	</record>
 
+
 	<record id="view_repository_tree" model="ir.ui.view">
 		<field name="name">view.repository.tree</field>
-		<field name="model">repository</field>
+		<field name="model">repository</field>a
 		<field name="arch" type="xml">
 			<tree string="Repositories">
-				<field name="name" />
-				<field name="user" />
-				<field name="link" />
-				<field name="commits_last_date" />
+				<field name="name"/>
+				<field name="user_id" string="User"/>
+				<field name="link"/>
+				<field name="state" decoration-info="state == 'active'" decoration-muted="state == 'inactive'" decoration-danger="state == 'cancelled'" decoration-warning="state == 'draft'" widget="badge"/>
+				<field name="commits_last_date"/>
 			</tree>
 		</field>
 	</record>
 
 	<record id="action_repository" model="ir.actions.act_window">
-        <field name="name">Repositories</field>
-        <field name="res_model">repository</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="oe_view_nocontent_create">
+		<field name="name">Repositories</field>
+		<field name="res_model">repository</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
                 Click to create a new repository.
-            </p>
-        </field>
-    </record>
+			</p>
+		</field>
+	</record>
 
-    <menuitem id="menu_repository_root" name="Repositories"
-              sequence="10"/>
-
-    <menuitem id="menu_repository" name="Repositories"
-              parent="menu_repository_root"
-              action="action_repository" sequence="10"/>
-
+	<menuitem id="menu_repository_root" name="Repositories" sequence="10"/>
+	<menuitem id="menu_repository" name="Repositories" parent="menu_repository_root" action="action_repository" sequence="10"/>
 </odoo>

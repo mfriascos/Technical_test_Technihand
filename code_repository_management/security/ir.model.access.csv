@@ -1,1 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_repository_user,access.repository.user,model_repository,base.group_user,1,1,1,1
+access_commits_user,access.commits.user,model_commits,base.group_user,1,1,1,1

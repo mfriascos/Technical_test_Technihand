@@ -20,9 +20,8 @@
     'depends': ['base'],
 
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/repository_views.xml',
-        'views/commits_views.xml',
     ],
 
     'installable': True,
