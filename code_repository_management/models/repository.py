@@ -30,6 +30,8 @@ class Repository(models.Model):
         'res.partner', string='Commits Contributor', compute='_compute_commits_contributor')
     commit_line_ids = fields.One2many('commits', 'repository_id', string='Commit Line Ids',
                                       copy=True, readonly=True, states={'draft': [('readonly', False)]})
+    last_commit_url = fields.Char(
+        string="Last Commit URL", compute='_compute_last_commit_url')
 
     @api.depends('commit_line_ids.date')
     def _compute_commits_last_date(self):
@@ -70,6 +72,15 @@ class Repository(models.Model):
                     record.commits_contributor = False
             else:
                 record.commits_contributor = False
+
+    @api.depends('commit_line_ids')
+    def _compute_last_commit_url(self):
+        for record in self:
+            if record.commit_line_ids:
+                last_commit = record.commit_line_ids[0]
+                record.last_commit_url = f"{record.link}/commit/{last_commit.hash}" if record.link else False
+            else:
+                record.last_commit_url = False
 
     def action_draft(self):
         self.state = 'draft'

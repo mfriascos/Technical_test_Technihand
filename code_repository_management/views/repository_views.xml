@@ -43,17 +43,16 @@
 		</field>
 	</record>
 
-
 	<record id="view_repository_tree" model="ir.ui.view">
 		<field name="name">view.repository.tree</field>
-		<field name="model">repository</field>a
+		<field name="model">repository</field>
 		<field name="arch" type="xml">
 			<tree string="Repositories">
 				<field name="name"/>
 				<field name="user_id" string="User"/>
 				<field name="link"/>
 				<field name="state" decoration-info="state == 'active'" decoration-muted="state == 'inactive'" decoration-danger="state == 'cancelled'" decoration-warning="state == 'draft'" widget="badge"/>
-				<field name="commits_last_date"/>
+				<field name="commits_last_date" widget="html" attrs="{'style': 'color:green;' if 'hours' in commits_last_date else 'color:blue;'}"/>
 			</tree>
 		</field>
 	</record>
@@ -71,4 +70,5 @@
 
 	<menuitem id="menu_repository_root" name="Repositories" sequence="10"/>
 	<menuitem id="menu_repository" name="Repositories" parent="menu_repository_root" action="action_repository" sequence="10"/>
+
 </odoo>

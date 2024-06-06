@@ -17,7 +17,10 @@
     'category': 'Test',
     'version': '0.1',
 
-    'depends': ['base'],
+    'depends': ['base', 'contacts'],
+    'external_dependencies': {
+        'python': ['requests'],
+    },
 
     'data': [
         'security/ir.model.access.csv',
