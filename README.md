@@ -12,11 +12,21 @@ El módulo Technical_test_technihand está pensado para registrar y gestionar in
 - ## Instalación
 
   **Clonar el repositorio del módulo**
-
   ```bash
   git clone https://github.com/mfriascos/Technical_test_Technihand.git
   ```
 
-  **
+  **Mover el módulo al directorio de addons de odoo**
+  ```bash
+  mv code_repository_management ruta/ddons/
+  ```
+  **Actualizar la lista de módulos:**
+
+Iniciar sesión en Odoo como administrador, ir a Aplicaciones, y hacer clic en Actualizar Lista.
+
+**Instalar el módulo:**
+
+Buscar Code Repository Management en la lista de aplicaciones y hacer clic en Instalar.
+  
   
 
