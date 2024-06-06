@@ -39,9 +39,11 @@ El módulo Technical_test_technihand está pensado para registrar y gestionar in
     ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/94005d0d-7f30-45f8-9395-ea2d05121461)
 
   - Inclusión de funcionalidades para menejo de estados: Se incluyen botones para manejra los estados, iniciando de la siguiente forma, en borrador cuando se crea el commit, luego existe un botón llamado activar, que indica que el repositorio está activo, cuando se encuentra en activo hay un botón llamado desactivar para indicar que el repositorio está inactivo y finalmente el botón de cancelar para cancelar un repositorio.
+    
     ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/de270042-24d6-4fca-aeb2-77a48fa7d73c)
 
   En la vista tree, estos estados tienen colores diferentes para indicar su estado
+  
   **Borrador**
   ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/a8019556-774c-4806-a62c-796ea69fa31e)
   **Activo**
