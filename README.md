@@ -7,6 +7,7 @@ El módulo Technical_test_technihand está pensado para registrar y gestionar in
 **Tabla de Contenido**
 
 - [Instalación](##Instalación)
+- [Funcionalidades](#Funcionalidaes)
 
 
 - ## Instalación
@@ -22,11 +23,28 @@ El módulo Technical_test_technihand está pensado para registrar y gestionar in
   ```
   **Actualizar la lista de módulos:**
 
-Iniciar sesión en Odoo como administrador, ir a Aplicaciones, y hacer clic en Actualizar Lista.
+  Iniciar sesión en Odoo como administrador, ir a Aplicaciones, y hacer clic en Actualizar Lista.
 
-**Instalar el módulo:**
+  **Instalar el módulo:**
 
-Buscar Code Repository Management en la lista de aplicaciones y hacer clic en Instalar.
+  Buscar Code Repository Management en la lista de aplicaciones y hacer clic en Instalar.
+
+- ## Funcionalidades
   
+  **Gestión de Repositorios**
+  - Crear y editar repositorios: Incluye campos como nombre, enlace, usuario responsable y estados (Borrador, Activo, Inactivo, Cancelado).
+  - Visualizar commits: Se muestra una lista de commits asociados a cada repositorio.
+  - Acceso rápido al último commit: Botón en la vista de lista que redirige al último commit en GitHub.
+
+  **Visualización en res.partner**
+  - Pestaña adicional: En el modelo res.partner, se agrega una pestaña llamada "Code Repositories" donde se listan los repositorios asociados al cliente.
+
+  **Reportes**
+  - Informe en PDF: Generar un reporte PDF con los detalles de los commits (fecha, responsable, mensaje).
+
+  **Seguridad**
+  - Permisos diferenciados:
+  - Administradores: Pueden editar y generar reportes.
+  - Usuarios: Solo tienen permisos de visualización.
   
 
