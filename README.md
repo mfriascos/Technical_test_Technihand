@@ -6,7 +6,17 @@ El módulo Technical_test_technihand está pensado para registrar y gestionar in
 
 **Tabla de Contenido**
 
-1. [Instalación](##Instalación)
+- [Instalación](##Instalación)
 
 
-1. ## Instalación
+- ## Instalación
+
+  **Clonar el repositorio del módulo**
+
+  ```bash
+  git clone https://github.com/mfriascos/Technical_test_Technihand.git
+  ```
+
+  **
+  
+
