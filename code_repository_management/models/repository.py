@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 from datetime import datetime, timedelta
 from collections import Counter
 import requests
@@ -49,11 +49,11 @@ class Repository(models.Model):
 
                     if time_diff < timedelta(hours=24):
                         hours = time_diff.seconds // 3600
-                        record.commits_last_date = f"The last commit was {hours} hours ago"
+                        record.commits_last_date = _("The last commit was {} hours ago").format(hours)
                         record.check_time = True
                     else:
                         days = time_diff.days
-                        record.commits_last_date = f"The last commit was {days} days ago"
+                        record.commits_last_date = _("The last commit was {} days ago").format(days)
                         record.check_time = False
                 else:
                     record.commits_last_date = 'N/A'

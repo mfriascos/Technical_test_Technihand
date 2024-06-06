@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-06 04:06+0000\n"
-"PO-Revision-Date: 2024-06-06 04:06+0000\n"
+"POT-Creation-Date: 2024-06-06 13:59+0000\n"
+"PO-Revision-Date: 2024-06-06 13:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -245,6 +245,20 @@ msgstr "Responsable"
 #: model:ir.model.fields,field_description:code_repository_management.field_repository__state
 msgid "Status"
 msgstr "Estado"
+
+#. module: code_repository_management
+#. odoo-python
+#: code:addons/code_repository_management/models/repository.py:0
+#, python-format
+msgid "The last commit was {} days ago"
+msgstr "El último commit fue hace {} días"
+
+#. module: code_repository_management
+#. odoo-python
+#: code:addons/code_repository_management/models/repository.py:0
+#, python-format
+msgid "The last commit was {} hours ago"
+msgstr "El ultimo commit fue hace {} horas"
 
 #. module: code_repository_management
 #: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_tree

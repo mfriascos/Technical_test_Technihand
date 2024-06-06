@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_repository_manager,access.repository.manager,model_repository,group_repository_manager,1,1,1,1
-access_repository_user,access.repository.user,model_repository,group_repository_user,1,0,0,0
+access_repository_user,access.repository.user,model_repository,group_repository_user,1,1,0,0
 access_commits_manager,access.commits.manager,model_commits,group_repository_manager,1,1,1,1
-access_commits_user,access.commits.user,model_commits,group_repository_user,1,0,0,0
+access_commits_user,access.commits.user,model_commits,group_repository_user,1,1,0,0
