@@ -18,7 +18,7 @@
 					<group>
 						<group>
 							<field name="name"/>
-							<field name="user_id" string="User"/>
+							<field name="partner_id" string="Partner"/>
 						</group>
 						<group>
 							<field name="link"/>
@@ -43,17 +43,19 @@
 		</field>
 	</record>
 
-
 	<record id="view_repository_tree" model="ir.ui.view">
 		<field name="name">view.repository.tree</field>
-		<field name="model">repository</field>a
+		<field name="model">repository</field>
 		<field name="arch" type="xml">
 			<tree string="Repositories">
 				<field name="name"/>
-				<field name="user_id" string="User"/>
+				<field name="partner_id" string="User"/>
 				<field name="link"/>
 				<field name="state" decoration-info="state == 'active'" decoration-muted="state == 'inactive'" decoration-danger="state == 'cancelled'" decoration-warning="state == 'draft'" widget="badge"/>
-				<field name="commits_last_date"/>
+				<field name="check_time" invisible="1" />
+				<field name="commits_last_date" decoration-info="check_time == True" decoration-success="check_time == False" widget="badge"/>
+				<field name="last_commit_url" invisible="1"/>
+                <button name="action_open_commit" type="object" icon="fa-external-link" string="Last Commit" attrs="{'invisible': [('last_commit_url', '=', False)]}" class="btn-primary"/>
 			</tree>
 		</field>
 	</record>
@@ -71,4 +73,5 @@
 
 	<menuitem id="menu_repository_root" name="Repositories" sequence="10"/>
 	<menuitem id="menu_repository" name="Repositories" parent="menu_repository_root" action="action_repository" sequence="10"/>
+
 </odoo>

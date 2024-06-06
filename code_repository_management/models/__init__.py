@@ -2,3 +2,4 @@
 
 from . import commits
 from . import repository
+from . import res_partner

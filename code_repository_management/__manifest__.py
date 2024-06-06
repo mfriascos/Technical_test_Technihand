@@ -17,11 +17,18 @@
     'category': 'Test',
     'version': '0.1',
 
-    'depends': ['base'],
+    'depends': ['base', 'contacts', 'web'],
+    'external_dependencies': {
+        'python': ['requests'],
+    },
 
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'views/repository_views.xml',
+        'views/res_partner_views.xml',
+        'reports/code_repository_template.xml',
+        'reports/report_commit.xml',
     ],
 
     'installable': True,

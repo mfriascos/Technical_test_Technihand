@@ -1,0 +1,265 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* code_repository_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-06 04:06+0000\n"
+"PO-Revision-Date: 2024-06-06 04:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: code_repository_management
+#: model:ir.actions.report,print_report_name:code_repository_management.action_report_commit
+msgid "'Commit Report - %s' % (object.name)"
+msgstr "'Reporte de Commits - %s' % (object.name)"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.code_repository_template
+msgid "<strong>Partner ID:</strong>"
+msgstr "<strong>Usuario:</strong>"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.code_repository_template
+msgid "<strong>Repository Link:</strong>"
+msgstr "<strong>Enlace del Repositorio:</strong>"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.code_repository_template
+msgid "<strong>Repository Name:</strong>"
+msgstr "<strong>Nombre del Repositorio:</strong>"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_form
+msgid "Activate"
+msgstr "Activar"
+
+#. module: code_repository_management
+#: model:ir.model.fields.selection,name:code_repository_management.selection__repository__state__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: code_repository_management
+#: model:ir.model.fields.selection,name:code_repository_management.selection__repository__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__check_time
+msgid "Check time"
+msgstr ""
+
+#. module: code_repository_management
+#: model_terms:ir.actions.act_window,help:code_repository_management.action_repository
+msgid "Click to create a new repository."
+msgstr "Click para Crear un Nuevo Repositorio"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_partner_form_inherit
+msgid "Code Repositories"
+msgstr "Repositorios de Código"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__commit_line_ids
+msgid "Commit Line Ids"
+msgstr "Líneas de Commits"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_form
+msgid "Commit Lines"
+msgstr "Líneas de Commits"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__commits_contributor
+msgid "Commits Contributor"
+msgstr "Mayor Contribuidor de Commits"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__commits_last_date
+msgid "Commits Last Date"
+msgstr "Fecha del Último Commit"
+
+#. module: code_repository_management
+#: model:ir.actions.report,name:code_repository_management.action_report_commit
+#: model_terms:ir.ui.view,arch_db:code_repository_management.code_repository_template
+msgid "Commits Report"
+msgstr "Reporte de Commits"
+
+#. module: code_repository_management
+#: model:ir.model,name:code_repository_management.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__create_uid
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__create_date
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__date
+#: model_terms:ir.ui.view,arch_db:code_repository_management.code_repository_template
+msgid "Date"
+msgstr "Fecha"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_form
+msgid "Deactivate"
+msgstr "Desactivar"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__display_name
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: code_repository_management
+#: model:ir.model.fields.selection,name:code_repository_management.selection__repository__state__draft
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_form
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__hash
+msgid "Hash"
+msgstr ""
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__id
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__id
+msgid "ID"
+msgstr ""
+
+#. module: code_repository_management
+#: model:ir.model.fields.selection,name:code_repository_management.selection__repository__state__inactive
+msgid "Inactive"
+msgstr "Inactivo"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_tree
+msgid "Last Commit"
+msgstr "Último Commit"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__last_commit_url
+msgid "Last Commit URL"
+msgstr "URL último Commit"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits____last_update
+#: model:ir.model.fields,field_description:code_repository_management.field_repository____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__write_uid
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__write_date
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__link
+msgid "Link"
+msgstr "Enlace"
+
+#. module: code_repository_management
+#: model:ir.model,name:code_repository_management.model_commits
+#: model:ir.model,name:code_repository_management.model_repository
+msgid "Managing Source Code Repositories in Odoo"
+msgstr "Gestión de código Fuente de Repositorios en Odoo"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__message
+#: model_terms:ir.ui.view,arch_db:code_repository_management.code_repository_template
+msgid "Message"
+msgstr "Mensaje"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__partner_id
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__partner_id
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_form
+msgid "Partner"
+msgstr "Propietario"
+
+#. module: code_repository_management
+#: model:ir.actions.act_window,name:code_repository_management.action_repository
+#: model:ir.model.fields,field_description:code_repository_management.field_res_partner__repository_ids
+#: model:ir.model.fields,field_description:code_repository_management.field_res_users__repository_ids
+#: model:ir.ui.menu,name:code_repository_management.menu_repository
+#: model:ir.ui.menu,name:code_repository_management.menu_repository_root
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_partner_form_inherit
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_tree
+msgid "Repositories"
+msgstr "Repositorios"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_commits__repository_id
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_form
+msgid "Repository"
+msgstr "Repositorio"
+
+#. module: code_repository_management
+#: model:res.groups,name:code_repository_management.group_repository_manager
+msgid "Repository Manager"
+msgstr "Administrador de Repositorios"
+
+#. module: code_repository_management
+#: model:res.groups,name:code_repository_management.group_repository_user
+msgid "Repository User"
+msgstr "Usuario de Repositorio"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.code_repository_template
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: code_repository_management
+#: model:ir.model.fields,field_description:code_repository_management.field_repository__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: code_repository_management
+#: model_terms:ir.ui.view,arch_db:code_repository_management.view_repository_tree
+msgid "User"
+msgstr "Usuario"
+
+#. module: code_repository_management
+#: model:ir.model.fields,help:code_repository_management.field_repository__state
+msgid ""
+"When a repository is created, the status is 'Draft'.\n"
+"If the repository is confirmed, the status goes to 'Active'.\n"
+"The 'Inactive' status can be set if the repository is not confirmed.\n"
+"By cancelling a repository, it's possible manually updating"
+msgstr ""
+"Cuando se crea un repositorio, el estado es 'Borrador'.\n"
+"Si el repositorio se confirma, el estado pasa a 'Activo'.\n"
+"El estado 'Inactivo' se puede establecer si el repositorio no se confirma.\n"
+"Al cancelar un repositorio, es posible actualizar manualmente"
