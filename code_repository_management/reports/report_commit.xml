@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <report
+        id="action_report_commit"
+        model="repository"
+        string="Commits Report"
+        report_type="qweb-pdf"
+        name="code_repository_management.code_repository_template"
+        file="code_repository_management.code_repository_template"
+        print_report_name="'Commit Report - %s' % (object.name)"
+    />
+</odoo>
