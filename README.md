@@ -54,7 +54,10 @@ El módulo Technical_test_technihand está pensado para registrar y gestionar in
   ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/64fba12e-1d44-43cc-abb9-fcb0c1030666)
   
   - Acceso rápido al último commit: Botón en la vista de lista que redirige al último commit en GitHub.
+  ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/d17080bc-47a6-4367-a3d0-a0ad2f309134)
+  ![Odoo - Repositorios - Personal_ Microsoft_ Edge 2024-06-06 09-11-49](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/3fa1d9f7-7751-42dd-9129-8750f46b190c)
 
+  
   **Visualización en res.partner**
   - Pestaña adicional: En el modelo res.partner, se agrega una pestaña llamada "Code Repositories" donde se listan los repositorios asociados al cliente.
 
