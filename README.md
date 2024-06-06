@@ -33,6 +33,8 @@ El módulo Technical_test_technihand está pensado para registrar y gestionar in
   
   **Gestión de Repositorios**
   - Crear y editar repositorios: Incluye campos como nombre, enlace, usuario responsable y estados (Borrador, Activo, Inactivo, Cancelado).
+    ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/98fff20f-0e6e-4942-9701-6164be0f7703)
+
   - Visualizar commits: Se muestra una lista de commits asociados a cada repositorio.
   - Acceso rápido al último commit: Botón en la vista de lista que redirige al último commit en GitHub.
 
