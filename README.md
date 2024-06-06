@@ -29,6 +29,10 @@ El módulo Technical_test_technihand está pensado para registrar y gestionar in
 
   Buscar Code Repository Management en la lista de aplicaciones y hacer clic en Instalar.
 
+  **Otorgar Permisos**
+
+  Para visualizar el módulo por favor ingrese a ajustes usuarios y grupoos y asigne un grupo, el cual puede ser adminisitrador de repositorios o usuario de repositorio. 
+
 - ## Funcionalidades
   
   **Gestión de Repositorios**
@@ -60,13 +64,41 @@ El módulo Technical_test_technihand está pensado para registrar y gestionar in
   
   **Visualización en res.partner**
   - Pestaña adicional: En el modelo res.partner, se agrega una pestaña llamada "Code Repositories" donde se listan los repositorios asociados al cliente.
+  ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/6e681448-60f6-4487-b82b-8c780e95fce3)
+  ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/c118611f-337d-4ba8-9b13-99d63969210f)
 
   **Reportes**
   - Informe en PDF: Generar un reporte PDF con los detalles de los commits (fecha, responsable, mensaje).
+  ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/021b4da1-1879-4234-ab4a-33e028ee2988)
+  ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/3d65c12d-d032-4110-b97f-171de32a1bfb)
+
 
   **Seguridad**
   - Permisos diferenciados:
   - Administradores: Pueden editar y generar reportes.
   - Usuarios: Solo tienen permisos de visualización.
+  ![image](https://github.com/mfriascos/Technical_test_Technihand/assets/90413990/f995d47c-4f43-41f0-ac83-ddbf92943819)
+
+- ## Uso
+  
+  **Crear un nuevo repositorio**
+  
+  Ir al menú Repositorios y hacer clic en Crear.
+  
+  Llenar los campos necesarios y guardar el registro.
+  
+  Agregar commits manualmente.
+  
+  **Visualizar repositorios en res.partner**
+
+  Ir al menú Contactos y seleccionar un contacto.
+  
+  Navegar a la pestaña Code Repositories para ver los repositorios asociados.
+
+  **Generar reporte PDF**
+
+  Seleccionar un repositorio.
+
+  Hacer clic en el botón Imprimir y seleccionar Commits Report.
   
 
